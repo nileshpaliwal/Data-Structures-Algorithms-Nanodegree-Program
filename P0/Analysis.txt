@@ -1,0 +1,22 @@
+
+** Task0.py **
+This takes runs in __O(1)__, due to the fact that _access_ on a Python array has O(1), and there are
+two lines executing accesses to lists
+
+** Task1.py **
+This takes runs in __O(n)__, due to the fact that we access sequentially both files for two of their
+columns, resulting in `2*2*O(n) -> O(n)`
+
+** Task2.py **
+Time Complexity: O(n)
+Description: List is looped through once
+
+
+** Task3.py **
+Time Complexity: O(n+nlogn)
+Description: For loop and python sort
+
+
+** Task4.py **
+Time Complexity: O(n+nlogn)
+Description: For loop and python sort
