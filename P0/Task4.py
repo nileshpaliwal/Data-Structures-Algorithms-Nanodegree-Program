@@ -24,17 +24,21 @@ Print a message:
 <list of numbers>
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
+if __name__ == '__main__':
+    call_senders = set([data[0] for data in calls])
+    call_receivers = set([data[1] for data in calls])
+    message_senders = set([data[0] for data in texts])
+    message_receivers = set([data[1] for data in texts])
 
-outgoingCalls = set()
-incomingCalls = set()
-outgoingTexts = set()
-incomingTexts = set()
+    call_senders_susp = []
 
-for call in calls:
-    outgoingCalls.add(call[0])
-    incomingCalls.add(call[1])
-for text in texts:
-    outgoingTexts.add(text[0])
-    outgoingTexts.add(text[1])
+    for call_sender in call_senders:
+        if (call_sender not in call_receivers and call_sender not in message_senders and
+                call_sender not in message_receivers):
+            call_senders_susp.append(call_sender)
 
-print('These numbers could be telemarketers: ', *sorted(outgoingCalls - (incomingCalls|outgoingTexts|incomingTexts)))
+    call_senders_susp.sort()
+
+    print("\n These numbers would be telemarketers:")
+    for call_senser_susp in call_senders_susp:
+        print(call_senser_susp)
