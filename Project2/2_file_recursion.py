@@ -68,7 +68,12 @@ def find_files(suffix, path):
     except ValueError as err_msg:
         print(err_msg)
         return False
-
+    
+    #What if the provided path is a file path. That is an edge case I have covered and
+    #algorithm would not break if a file path is passed and os.listdir(path) is called because
+    #that call is expecting a directory path.
+    if os.path.isfile(path):
+        return path
     for dirs in os.listdir(path):
         pathalogic = os.path.join(path, dirs)
         if os.path.isfile(pathalogic):
