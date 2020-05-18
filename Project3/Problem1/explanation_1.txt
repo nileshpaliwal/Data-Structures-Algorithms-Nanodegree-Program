@@ -1,0 +1,10 @@
+>Start iterating from i = 1. If i * i = n, then print i as n is a perfect square whose square root is i.
+>Else find the smallest i for which i * i is strictly greater than n.
+>Now we know square root of n lies in the interval i – 1 and i and we can use Binary Search algorithm to find the square root.
+>Find mid of i – 1 and i and compare mid * mid with n, with precision upto 5 decimal places.
+>>If mid * mid = n then return mid.
+>>If mid * mid < n then recur for the second half.
+>>If mid * mid > n then recur for the first half.
+
+Time Complexity: O(log(n))
+Space Complexity: O(1)
