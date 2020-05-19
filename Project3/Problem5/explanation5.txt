@@ -1,0 +1,8 @@
+Trie Insert:
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+Trie find:
+
+Time Complexity: O(n)
+Space Complexity: O(1)
