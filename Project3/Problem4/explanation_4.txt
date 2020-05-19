@@ -1,0 +1,5 @@
+In one pass, we have three pointers and a pivot. The pivots value is one, to indicate the middle partition. The start pointer keeps track of the zeros partition, the mid pointer acts as an incrementor and keeps track of ones partition and end pointer gets decremented if the mid element is higher than the pivot.
+First partition the array around pivot 1, where all 2s will be placed at the end and 0s and 1s will be scrambled at the left. Then partition the first half of the array around pivot 0.5, which will sort 0s and 1s in place
+
+Time Complexity: O(n)
+Space Complexity: O(1)

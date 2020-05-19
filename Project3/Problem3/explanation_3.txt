@@ -1,0 +1,6 @@
+To find the maximum sum, we would solve on the assumption that the two maximum numbers formed by concatinating the odd indices to form the first number and concatinating the even indices to form the second. To achieve this, we need to sort the array from largest to smallest.
+
+We have used merge sort which gurantees:
+
+Time Complexity: O(log(n))
+Space Complexity: O(n)

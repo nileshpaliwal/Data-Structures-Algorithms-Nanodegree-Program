@@ -1,0 +1,6 @@
+To find an element in a sorted list, we also use a similar approach to binary search, however we tweak the conditions. 
+Used a pivot index where the list can be breaked into two halves.
+The pivot element is the smallest element in the list.
+
+Time Complexity: O(log(n))  
+Space Complexity: O(log(n))  
