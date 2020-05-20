@@ -1,0 +1,3 @@
+The time and space complexity is negligible for our Route Trie. This is because a url will never be longer than a few hundred characters at most. Our add_handler splits a route by its words ("/") and simply traverses the node's children for any matches before inserting the new path. The lookup function also splits the route into a list of paths, using each path to traverse the node children in search of a match.
+
+Therefore you get a O(1) space and time complexity, since the size of the input doesn't drastically change either the space used for creating a Route Trie, nor the time needed to lookup a route.
